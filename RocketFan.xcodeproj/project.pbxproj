@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		47CC198F2790A59A005DF9EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC198E2790A59A005DF9EC /* AppDelegate.swift */; };
 		47CC19912790A59A005DF9EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19902790A59A005DF9EC /* SceneDelegate.swift */; };
-		47CC19932790A59A005DF9EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19922790A59A005DF9EC /* ViewController.swift */; };
+		47CC19932790A59A005DF9EC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19922790A59A005DF9EC /* HomeViewController.swift */; };
 		47CC19962790A59A005DF9EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CC19942790A59A005DF9EC /* Main.storyboard */; };
 		47CC19982790A59D005DF9EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47CC19972790A59D005DF9EC /* Assets.xcassets */; };
 		47CC199B2790A59D005DF9EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CC19992790A59D005DF9EC /* LaunchScreen.storyboard */; };
 		47CC19A62790A59E005DF9EC /* RocketFanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19A52790A59E005DF9EC /* RocketFanTests.swift */; };
 		47CC19B02790A59E005DF9EC /* RocketFanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19AF2790A59E005DF9EC /* RocketFanUITests.swift */; };
 		47CC19B22790A59E005DF9EC /* RocketFanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19B12790A59E005DF9EC /* RocketFanUITestsLaunchTests.swift */; };
+		47CC19C12790A6FA005DF9EC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19C02790A6FA005DF9EC /* ListViewController.swift */; };
+		47CC19C52790A719005DF9EC /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19C42790A719005DF9EC /* ListViewModel.swift */; };
+		47CC19C72790A723005DF9EC /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19C62790A723005DF9EC /* ListModel.swift */; };
+		47CC19C92790B00C005DF9EC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19C82790B00C005DF9EC /* Observable.swift */; };
+		47CC19CB2790B034005DF9EC /* ListTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19CA2790B034005DF9EC /* ListTableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,7 @@
 		47CC198B2790A59A005DF9EC /* RocketFan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketFan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CC198E2790A59A005DF9EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47CC19902790A59A005DF9EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		47CC19922790A59A005DF9EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47CC19922790A59A005DF9EC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		47CC19952790A59A005DF9EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47CC19972790A59D005DF9EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47CC199A2790A59D005DF9EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,11 @@
 		47CC19AB2790A59E005DF9EC /* RocketFanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocketFanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CC19AF2790A59E005DF9EC /* RocketFanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketFanUITests.swift; sourceTree = "<group>"; };
 		47CC19B12790A59E005DF9EC /* RocketFanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketFanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		47CC19C02790A6FA005DF9EC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		47CC19C42790A719005DF9EC /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		47CC19C62790A723005DF9EC /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		47CC19C82790B00C005DF9EC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		47CC19CA2790B034005DF9EC /* ListTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +109,12 @@
 		47CC198D2790A59A005DF9EC /* RocketFan */ = {
 			isa = PBXGroup;
 			children = (
-				47CC198E2790A59A005DF9EC /* AppDelegate.swift */,
-				47CC19902790A59A005DF9EC /* SceneDelegate.swift */,
-				47CC19922790A59A005DF9EC /* ViewController.swift */,
-				47CC19942790A59A005DF9EC /* Main.storyboard */,
+				47CC19CC2790B198005DF9EC /* Resources */,
+				47CC19CD2790B1A9005DF9EC /* Storyboards */,
+				47CC19C82790B00C005DF9EC /* Observable.swift */,
+				47CC19922790A59A005DF9EC /* HomeViewController.swift */,
+				47CC19BE2790A6A6005DF9EC /* List */,
 				47CC19972790A59D005DF9EC /* Assets.xcassets */,
-				47CC19992790A59D005DF9EC /* LaunchScreen.storyboard */,
 				47CC199C2790A59D005DF9EC /* Info.plist */,
 			);
 			path = RocketFan;
@@ -125,6 +135,35 @@
 				47CC19B12790A59E005DF9EC /* RocketFanUITestsLaunchTests.swift */,
 			);
 			path = RocketFanUITests;
+			sourceTree = "<group>";
+		};
+		47CC19BE2790A6A6005DF9EC /* List */ = {
+			isa = PBXGroup;
+			children = (
+				47CC19C02790A6FA005DF9EC /* ListViewController.swift */,
+				47CC19C42790A719005DF9EC /* ListViewModel.swift */,
+				47CC19C62790A723005DF9EC /* ListModel.swift */,
+				47CC19CA2790B034005DF9EC /* ListTableViewCellViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		47CC19CC2790B198005DF9EC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47CC198E2790A59A005DF9EC /* AppDelegate.swift */,
+				47CC19902790A59A005DF9EC /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		47CC19CD2790B1A9005DF9EC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				47CC19942790A59A005DF9EC /* Main.storyboard */,
+				47CC19992790A59D005DF9EC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47CC19932790A59A005DF9EC /* ViewController.swift in Sources */,
+				47CC19932790A59A005DF9EC /* HomeViewController.swift in Sources */,
 				47CC198F2790A59A005DF9EC /* AppDelegate.swift in Sources */,
+				47CC19C52790A719005DF9EC /* ListViewModel.swift in Sources */,
+				47CC19C92790B00C005DF9EC /* Observable.swift in Sources */,
+				47CC19CB2790B034005DF9EC /* ListTableViewCellViewModel.swift in Sources */,
+				47CC19C72790A723005DF9EC /* ListModel.swift in Sources */,
+				47CC19C12790A6FA005DF9EC /* ListViewController.swift in Sources */,
 				47CC19912790A59A005DF9EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +486,7 @@
 				DEVELOPMENT_TEAM = K82L669RJD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RocketFan/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rocket Fan";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -470,6 +515,7 @@
 				DEVELOPMENT_TEAM = K82L669RJD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RocketFan/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rocket Fan";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
