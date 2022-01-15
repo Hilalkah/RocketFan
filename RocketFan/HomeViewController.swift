@@ -18,6 +18,9 @@ class HomeViewController: UITabBarController {
     
     private func setupTabBar() {
         
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.backgroundColor = nil
+        tabBar.scrollEdgeAppearance = tabBarAppearance
         tabBar.tintColor = .systemPurple
         
         viewControllers = [
