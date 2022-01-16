@@ -9,6 +9,7 @@ import UIKit
 import Kingfisher
 
 class RocketListTableViewCell: UITableViewCell {
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var rocketImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
@@ -16,7 +17,17 @@ class RocketListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupView()
+    }
+    
+    private func setupView() {
+        backView.backgroundColor = .label.withAlphaComponent(0.1)
+        backView.layer.cornerRadius = 4
+        
         rocketImageView.layer.cornerRadius = 4
+        
+        favoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+        favoriteButton.setImage(UIImage(systemName: "star.fill"), for: .selected)
     }
     
     func setValues(_ model: ListTableViewCellViewModel?) {
