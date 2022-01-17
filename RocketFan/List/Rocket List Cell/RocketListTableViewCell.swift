@@ -15,6 +15,8 @@ class RocketListTableViewCell: UITableViewCell {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    var vc: ListViewController?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
@@ -35,6 +37,7 @@ class RocketListTableViewCell: UITableViewCell {
         titleLabel.text = item.name
         infoLabel.text = item.description
         favoriteButton.isSelected = item.isFavorite
+        favoriteButton.addTarget(self, action: #selector(favoriteButtonAction), for: .touchUpInside)
         
         if let imageString = item.flickr_images.first,
            let imageUrl = URL(string: imageString) {
@@ -42,4 +45,9 @@ class RocketListTableViewCell: UITableViewCell {
         }
     }
     
+    @objc private func favoriteButtonAction(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        vc?.favoriteAction(self)
+    }
+
 }

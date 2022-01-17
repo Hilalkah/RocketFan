@@ -71,10 +71,14 @@ class ListViewController: UIViewController {
         task.resume()
     }
     
-    @objc func favoriteButtonAction(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-        let index = sender.tag
-        viewModel.list.value?[index].isFavorite = sender.isSelected
+    func favoriteAction(_ cell: UITableViewCell) {
+        guard
+            let indexPathTapped = tableView.indexPath(for: cell),
+            let isFavorite = viewModel.list.value?[indexPathTapped.row].isFavorite
+        else {
+            return
+        }
+        viewModel.list.value?[indexPathTapped.row].isFavorite = !isFavorite
     }
 
 }
@@ -90,9 +94,8 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         cell.selectionStyle = .none
+        cell.vc = self
         cell.setValues(viewModel.list.value?[indexPath.row])
-        cell.favoriteButton.tag = indexPath.row
-        cell.favoriteButton.addTarget(self, action: #selector(favoriteButtonAction), for: .touchUpInside)
         return cell
     }
     
