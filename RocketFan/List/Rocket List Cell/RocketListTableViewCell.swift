@@ -34,6 +34,7 @@ class RocketListTableViewCell: UITableViewCell {
         guard let item = model else { return }
         titleLabel.text = item.name
         infoLabel.text = item.description
+        favoriteButton.isSelected = item.isFavorite
         
         if let imageString = item.flickr_images.first,
            let imageUrl = URL(string: imageString) {
