@@ -9,11 +9,7 @@ import UIKit
 
 class ListViewController: UIViewController {
     
-    private let tableView: UITableView = {
-        let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        return table
-    }()
+    private let tableView = UITableView()
     
     private enum Constants {
         static let cellId = "RocketListTableViewCell"
