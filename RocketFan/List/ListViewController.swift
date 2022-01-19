@@ -56,8 +56,9 @@ class ListViewController: UIViewController {
                 let model = try JSONDecoder().decode([ListModel].self, from: data)
                 
                 self.viewModel.list.value = model.compactMap({
-                    ListTableViewCellViewModel(name: $0.name, description: $0.description, flickr_images: $0.flickr_images)
+                    ListTableViewCellViewModel(id: $0.id, name: $0.name, description: $0.description, flickr_images: $0.flickr_images)
                 })
+                self.setFavorites()
             }
             catch {
                 print("error", error)
@@ -70,11 +71,29 @@ class ListViewController: UIViewController {
     func favoriteAction(_ cell: UITableViewCell) {
         guard
             let indexPathTapped = tableView.indexPath(for: cell),
-            let isFavorite = viewModel.list.value?[indexPathTapped.row].isFavorite
+            let item = viewModel.list.value?[indexPathTapped.row]
         else {
             return
         }
-        viewModel.list.value?[indexPathTapped.row].isFavorite = !isFavorite
+        viewModel.list.value?[indexPathTapped.row].isFavorite = !item.isFavorite
+        if !item.isFavorite {
+            Favorites.shared.addItem(item.id)
+        }else {
+            Favorites.shared.removeItem(item.id)
+        }
+    }
+    
+    private func setFavorites() {
+        let favoriteIds: [String] = Favorites.shared.items
+        for favoriteId in favoriteIds {
+            if let value = viewModel.list.value {
+                for index in 0..<value.count {
+                    if value[index].id == favoriteId {
+                        viewModel.list.value?[index].isFavorite = true
+                    }
+                }
+            }
+        }
     }
 
 }

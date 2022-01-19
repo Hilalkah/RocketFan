@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		476B81342798AC350093AB37 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B81332798AC350093AB37 /* Favorites.swift */; };
 		47C84ED1279313D6002FCE92 /* RocketListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C84ECF279313D6002FCE92 /* RocketListTableViewCell.swift */; };
 		47C84ED2279313D6002FCE92 /* RocketListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C84ED0279313D6002FCE92 /* RocketListTableViewCell.xib */; };
 		47C84ED527931B56002FCE92 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 47C84ED427931B56002FCE92 /* Kingfisher */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		476B81332798AC350093AB37 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		47C84ECF279313D6002FCE92 /* RocketListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListTableViewCell.swift; sourceTree = "<group>"; };
 		47C84ED0279313D6002FCE92 /* RocketListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketListTableViewCell.xib; sourceTree = "<group>"; };
 		47CC198B2790A59A005DF9EC /* RocketFan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketFan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		476B81362798AC7C0093AB37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				47CC19C82790B00C005DF9EC /* Observable.swift */,
+				476B81332798AC350093AB37 /* Favorites.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		47C84ECE2793136D002FCE92 /* Rocket List Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +135,7 @@
 			children = (
 				47CC19CC2790B198005DF9EC /* Resources */,
 				47CC19CD2790B1A9005DF9EC /* Storyboards */,
-				47CC19C82790B00C005DF9EC /* Observable.swift */,
+				476B81362798AC7C0093AB37 /* Models */,
 				47CC19922790A59A005DF9EC /* HomeViewController.swift */,
 				47CC19BE2790A6A6005DF9EC /* List */,
 				47CC19972790A59D005DF9EC /* Assets.xcassets */,
@@ -319,6 +330,7 @@
 				47C84ED1279313D6002FCE92 /* RocketListTableViewCell.swift in Sources */,
 				47CC19932790A59A005DF9EC /* HomeViewController.swift in Sources */,
 				47CC198F2790A59A005DF9EC /* AppDelegate.swift in Sources */,
+				476B81342798AC350093AB37 /* Favorites.swift in Sources */,
 				47CC19C52790A719005DF9EC /* ListViewModel.swift in Sources */,
 				47CC19C92790B00C005DF9EC /* Observable.swift in Sources */,
 				47CC19CB2790B034005DF9EC /* ListTableViewCellViewModel.swift in Sources */,
