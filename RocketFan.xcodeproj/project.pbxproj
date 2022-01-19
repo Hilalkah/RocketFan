@@ -101,6 +101,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		476B81372798AD810093AB37 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				47CC19922790A59A005DF9EC /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		47C84ECE2793136D002FCE92 /* Rocket List Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,12 +142,12 @@
 			isa = PBXGroup;
 			children = (
 				47CC19CC2790B198005DF9EC /* Resources */,
-				47CC19CD2790B1A9005DF9EC /* Storyboards */,
 				476B81362798AC7C0093AB37 /* Models */,
-				47CC19922790A59A005DF9EC /* HomeViewController.swift */,
+				476B81372798AD810093AB37 /* Home */,
 				47CC19BE2790A6A6005DF9EC /* List */,
 				47CC19972790A59D005DF9EC /* Assets.xcassets */,
 				47CC199C2790A59D005DF9EC /* Info.plist */,
+				47CC19992790A59D005DF9EC /* LaunchScreen.storyboard */,
 			);
 			path = RocketFan;
 			sourceTree = "<group>";
@@ -180,14 +188,6 @@
 				47CC19902790A59A005DF9EC /* SceneDelegate.swift */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		47CC19CD2790B1A9005DF9EC /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				47CC19992790A59D005DF9EC /* LaunchScreen.storyboard */,
-			);
-			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
