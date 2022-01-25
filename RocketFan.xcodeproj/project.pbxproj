@@ -92,13 +92,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		476B81362798AC7C0093AB37 /* Models */ = {
+		4732EB6C27A09505004BC14E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47CC19C02790A6FA005DF9EC /* ListViewController.swift */,
+				47C84ECE2793136D002FCE92 /* Rocket List Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4732EB6D27A0950E004BC14E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47CC19C62790A723005DF9EC /* ListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4732EB6E27A09517004BC14E /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				47CC19C42790A719005DF9EC /* ListViewModel.swift */,
+				47CC19CA2790B034005DF9EC /* ListTableViewCellViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		476B81362798AC7C0093AB37 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				47CC19C82790B00C005DF9EC /* Observable.swift */,
 				476B81332798AC350093AB37 /* Favorites.swift */,
 			);
-			path = Models;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		476B81372798AD810093AB37 /* Home */ = {
@@ -142,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				47CC19CC2790B198005DF9EC /* Resources */,
-				476B81362798AC7C0093AB37 /* Models */,
+				476B81362798AC7C0093AB37 /* Data */,
 				476B81372798AD810093AB37 /* Home */,
 				47CC19BE2790A6A6005DF9EC /* List */,
 				47CC19972790A59D005DF9EC /* Assets.xcassets */,
@@ -172,11 +198,9 @@
 		47CC19BE2790A6A6005DF9EC /* List */ = {
 			isa = PBXGroup;
 			children = (
-				47CC19C02790A6FA005DF9EC /* ListViewController.swift */,
-				47C84ECE2793136D002FCE92 /* Rocket List Cell */,
-				47CC19C42790A719005DF9EC /* ListViewModel.swift */,
-				47CC19C62790A723005DF9EC /* ListModel.swift */,
-				47CC19CA2790B034005DF9EC /* ListTableViewCellViewModel.swift */,
+				4732EB6C27A09505004BC14E /* View */,
+				4732EB6D27A0950E004BC14E /* Model */,
+				4732EB6E27A09517004BC14E /* View Model */,
 			);
 			path = List;
 			sourceTree = "<group>";
