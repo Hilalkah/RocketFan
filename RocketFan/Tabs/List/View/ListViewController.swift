@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ListViewControllerDelegate {
+    func updatedViewModel(_ viewModel: ListViewModel?)
+}
+
 class ListViewController: UIViewController {
     
     private let tableView = UITableView()
@@ -18,6 +22,8 @@ class ListViewController: UIViewController {
     
     private var viewModel = ListViewModel()
     
+    var delegate: ListViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +33,7 @@ class ListViewController: UIViewController {
         viewModel.list.bind { [weak self] _ in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
+                self?.delegate?.updatedViewModel(self?.viewModel)
             }
         }
         
@@ -76,6 +83,7 @@ class ListViewController: UIViewController {
             return
         }
         viewModel.list.value?[indexPathTapped.row].isFavorite = !item.isFavorite
+        delegate?.updatedViewModel(viewModel)
         if !item.isFavorite {
             Favorites.shared.addItem(item.id)
         }else {

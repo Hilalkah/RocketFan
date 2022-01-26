@@ -8,7 +8,10 @@
 import UIKit
 
 class HomeViewController: UITabBarController {
-
+    
+    let listViewController = ListViewController()
+    let favoritesViewController = FavoritesViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
@@ -23,12 +26,14 @@ class HomeViewController: UITabBarController {
         tabBar.scrollEdgeAppearance = tabBarAppearance
         tabBar.tintColor = .systemPurple
         
+        listViewController.delegate = self
+        
         viewControllers = [
-            createNavController(for: ListViewController(),
+            createNavController(for: listViewController,
                                    title: "Rocket List",
                                    image: UIImage(systemName: "list.bullet.rectangle"),
                                    selectedImage: UIImage(systemName: "list.bullet.rectangle.fill")),
-            createNavController(for: UIViewController(),
+            createNavController(for: favoritesViewController,
                                    title: "Favorites",
                                    image: UIImage(systemName: "star.square"),
                                    selectedImage: UIImage(systemName: "star.square.fill"))
@@ -51,3 +56,12 @@ class HomeViewController: UITabBarController {
     
 }
 
+extension HomeViewController: ListViewControllerDelegate {
+    
+    func updatedViewModel(_ viewModel: ListViewModel?) {
+        if let viewModel = viewModel {
+            favoritesViewController.favorites = viewModel.list.value?.filter({ $0.isFavorite == true })
+        }
+    }
+    
+}
