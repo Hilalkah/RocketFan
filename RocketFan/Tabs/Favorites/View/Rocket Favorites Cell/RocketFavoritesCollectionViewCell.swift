@@ -29,7 +29,7 @@ class RocketFavoritesCollectionViewCell: UICollectionViewCell {
         titleLabel.text = item.name
         infoLabel.text = item.description
         
-        if let imageString = item.flickr_images.first,
+        if let imageString = item.flickrImages.first,
            let imageUrl = URL(string: imageString) {
             rocketImageView.kf.setImage(with: imageUrl)
         }

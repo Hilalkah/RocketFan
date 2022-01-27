@@ -7,22 +7,18 @@
 
 import UIKit
 
-protocol ListViewControllerDelegate {
+protocol ListViewControllerDelegate: AnyObject {
     func updatedViewModel(_ viewModel: ListViewModel?)
 }
 
 class ListViewController: UIViewController {
     
     private let tableView = UITableView()
-    
-    private enum Constants {
-        static let cellId = "RocketListTableViewCell"
-        typealias CellType = RocketListTableViewCell
-    }
+    private let cellIdentifier = "RocketListTableViewCell"
     
     private var viewModel = ListViewModel()
     
-    var delegate: ListViewControllerDelegate?
+    weak var delegate: ListViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,24 +46,26 @@ class ListViewController: UIViewController {
     }
     
     private func setupTableViewCell() {
-        let nib = UINib(nibName: Constants.cellId, bundle: .main)
-        tableView.register(nib, forCellReuseIdentifier: Constants.cellId)
+        let cellNib = UINib(nibName: cellIdentifier, bundle: .main)
+        tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
     }
     
     private func fetchData() {
-        guard let url = URL(string: "https://api.spacexdata.com/v4/rockets") else { return }
+        guard let rocketsUrl = URL(string: "https://api.spacexdata.com/v4/rockets") else { return }
         
-        let task = URLSession.shared.dataTask(with: url) { data, _, _ in
+        let task = URLSession.shared.dataTask(with: rocketsUrl) { data, _, _ in
             guard let data = data else { return }
             do {
                 let model = try JSONDecoder().decode([ListModel].self, from: data)
                 
                 self.viewModel.list.value = model.compactMap({
-                    ListTableViewCellViewModel(id: $0.id, name: $0.name, description: $0.description, flickr_images: $0.flickr_images)
+                    ListTableViewCellViewModel(id: $0.id,
+                                               name: $0.name,
+                                               description: $0.description,
+                                               flickrImages: $0.flickrImages)
                 })
                 self.setFavorites()
-            }
-            catch {
+            } catch {
                 print("error", error)
             }
         }
@@ -86,7 +84,7 @@ class ListViewController: UIViewController {
         delegate?.updatedViewModel(viewModel)
         if !item.isFavorite {
             Favorites.shared.addItem(item.id)
-        }else {
+        } else {
             Favorites.shared.removeItem(item.id)
         }
     }
@@ -95,10 +93,8 @@ class ListViewController: UIViewController {
         let favoriteIds: [String] = Favorites.shared.items
         for favoriteId in favoriteIds {
             if let value = viewModel.list.value {
-                for index in 0..<value.count {
-                    if value[index].id == favoriteId {
-                        viewModel.list.value?[index].isFavorite = true
-                    }
+                for index in 0..<value.count where value[index].id == favoriteId {
+                    viewModel.list.value?[index].isFavorite = true
                 }
             }
         }
@@ -113,11 +109,14 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellId, for: indexPath) as? Constants.CellType else {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: cellIdentifier,
+            for: indexPath) as? RocketListTableViewCell
+        else {
             return UITableViewCell()
         }
         cell.selectionStyle = .none
-        cell.vc = self
+        cell.listViewController = self
         cell.setValues(viewModel.list.value?[indexPath.row])
         return cell
     }

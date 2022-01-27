@@ -14,12 +14,12 @@ class Favorites {
     private let keyValue = "Favorites"
     
     var items: [String] {
+        get {
+            return (UserDefaults.standard.array(forKey: keyValue) as? [String]) ?? []
+        }
         set {
             UserDefaults.standard.set(newValue, forKey: keyValue)
             UserDefaults.standard.synchronize()
-        }
-        get {
-            return (UserDefaults.standard.array(forKey: keyValue) as? [String]) ?? []
         }
     }
     

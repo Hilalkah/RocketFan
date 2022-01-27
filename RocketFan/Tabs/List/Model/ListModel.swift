@@ -12,5 +12,10 @@ struct ListModel: Codable {
     let active: Bool
     let name: String
     let description: String
-    let flickr_images: [String]
+    let flickrImages: [String]
+    
+    private enum CodingKeys: String, CodingKey {
+        case id, active, name, description, flickrImages = "flickr_images"
+    }
+    
 }

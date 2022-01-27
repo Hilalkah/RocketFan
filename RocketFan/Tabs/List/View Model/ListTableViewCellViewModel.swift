@@ -11,6 +11,6 @@ struct ListTableViewCellViewModel {
     let id: String
     let name: String
     let description: String
-    let flickr_images: [String]
+    let flickrImages: [String]
     var isFavorite: Bool = false
 }
