@@ -7,6 +7,7 @@
 - Observable
 - Swiftlint
 - Kingfisher
+- <a href="https://github.com/r-spacex/SpaceX-API">SpaceX API</a>
 
 #### Light mode:
 
