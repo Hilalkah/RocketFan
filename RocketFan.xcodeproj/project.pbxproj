@@ -27,6 +27,7 @@
 		47CC19C72790A723005DF9EC /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19C62790A723005DF9EC /* ListModel.swift */; };
 		47CC19C92790B00C005DF9EC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19C82790B00C005DF9EC /* Observable.swift */; };
 		47CC19CB2790B034005DF9EC /* ListTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC19CA2790B034005DF9EC /* ListTableViewCellViewModel.swift */; };
+		47D629F727A5BF4100A0E6AF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D629F627A5BF4100A0E6AF /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		47CC19C62790A723005DF9EC /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		47CC19C82790B00C005DF9EC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		47CC19CA2790B034005DF9EC /* ListTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		47D629F627A5BF4100A0E6AF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				47CC19CC2790B198005DF9EC /* Resources */,
+				47D629F527A5BF2700A0E6AF /* Networking */,
 				476B81362798AC7C0093AB37 /* Data */,
 				476B81372798AD810093AB37 /* Home */,
 				4732EB6F27A09573004BC14E /* Tabs */,
@@ -261,6 +264,14 @@
 				47CC19902790A59A005DF9EC /* SceneDelegate.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		47D629F527A5BF2700A0E6AF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				47D629F627A5BF4100A0E6AF /* NetworkManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +442,7 @@
 				47CC19C52790A719005DF9EC /* ListViewModel.swift in Sources */,
 				47CC19C92790B00C005DF9EC /* Observable.swift in Sources */,
 				4732EB7427A095CD004BC14E /* FavoritesViewController.swift in Sources */,
+				47D629F727A5BF4100A0E6AF /* NetworkManager.swift in Sources */,
 				47CC19CB2790B034005DF9EC /* ListTableViewCellViewModel.swift in Sources */,
 				47CC19C72790A723005DF9EC /* ListModel.swift in Sources */,
 				47CC19C12790A6FA005DF9EC /* ListViewController.swift in Sources */,

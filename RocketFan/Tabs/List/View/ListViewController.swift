@@ -50,27 +50,33 @@ class ListViewController: UIViewController {
         tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
     }
     
+    private func getRocketsRequest() -> URL? {
+        return URL(string: "https://api.spacexdata.com/v4/rockets")
+    }
+    
     private func fetchData() {
-        guard let rocketsUrl = URL(string: "https://api.spacexdata.com/v4/rockets") else { return }
-        
-        let task = URLSession.shared.dataTask(with: rocketsUrl) { data, _, _ in
-            guard let data = data else { return }
-            do {
-                let model = try JSONDecoder().decode([ListModel].self, from: data)
-                
-                self.viewModel.list.value = model.compactMap({
-                    ListTableViewCellViewModel(id: $0.id,
-                                               name: $0.name,
-                                               description: $0.description,
-                                               flickrImages: $0.flickrImages)
-                })
-                self.setFavorites()
-            } catch {
-                print("error", error)
+        guard let requestUrl = getRocketsRequest() else { return }
+        NetworkManager.shared.fetchData(requestUrl: requestUrl,
+                                        model: [ListModel].self,
+                                        completion: { model, error in
+            if error != nil {
+                return
             }
-        }
+            
+            guard let reponseModel = model else {
+                return
+            }
+            
+            self.viewModel.list.value = reponseModel.compactMap({
+                ListTableViewCellViewModel(id: $0.id,
+                                           name: $0.name,
+                                           description: $0.description,
+                                           flickrImages: $0.flickrImages)
+            })
+            self.setFavorites()
+            
+        })
         
-        task.resume()
     }
     
     func favoriteAction(_ cell: UITableViewCell) {
