@@ -10,6 +10,7 @@
 		4732EB7427A095CD004BC14E /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4732EB7327A095CD004BC14E /* FavoritesViewController.swift */; };
 		4732EB7827A0973D004BC14E /* RocketFavoritesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4732EB7627A0973D004BC14E /* RocketFavoritesCollectionViewCell.swift */; };
 		4732EB7927A0973D004BC14E /* RocketFavoritesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4732EB7727A0973D004BC14E /* RocketFavoritesCollectionViewCell.xib */; };
+		4755180527A867CF00B627BF /* RocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755180427A867CF00B627BF /* RocketManager.swift */; };
 		476B81342798AC350093AB37 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B81332798AC350093AB37 /* Favorites.swift */; };
 		47C84ED1279313D6002FCE92 /* RocketListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C84ECF279313D6002FCE92 /* RocketListTableViewCell.swift */; };
 		47C84ED2279313D6002FCE92 /* RocketListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C84ED0279313D6002FCE92 /* RocketListTableViewCell.xib */; };
@@ -51,6 +52,7 @@
 		4732EB7327A095CD004BC14E /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		4732EB7627A0973D004BC14E /* RocketFavoritesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketFavoritesCollectionViewCell.swift; sourceTree = "<group>"; };
 		4732EB7727A0973D004BC14E /* RocketFavoritesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketFavoritesCollectionViewCell.xib; sourceTree = "<group>"; };
+		4755180427A867CF00B627BF /* RocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketManager.swift; sourceTree = "<group>"; };
 		476B81332798AC350093AB37 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		47C84ECF279313D6002FCE92 /* RocketListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListTableViewCell.swift; sourceTree = "<group>"; };
 		47C84ED0279313D6002FCE92 /* RocketListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketListTableViewCell.xib; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				47D629F627A5BF4100A0E6AF /* NetworkManager.swift */,
+				4755180427A867CF00B627BF /* RocketManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				4732EB7827A0973D004BC14E /* RocketFavoritesCollectionViewCell.swift in Sources */,
 				47CC19C52790A719005DF9EC /* ListViewModel.swift in Sources */,
 				47CC19C92790B00C005DF9EC /* Observable.swift in Sources */,
+				4755180527A867CF00B627BF /* RocketManager.swift in Sources */,
 				4732EB7427A095CD004BC14E /* FavoritesViewController.swift in Sources */,
 				47D629F727A5BF4100A0E6AF /* NetworkManager.swift in Sources */,
 				47CC19CB2790B034005DF9EC /* ListTableViewCellViewModel.swift in Sources */,

@@ -50,15 +50,9 @@ class ListViewController: UIViewController {
         tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
     }
     
-    private func getRocketsRequest() -> URL? {
-        return URL(string: "https://api.spacexdata.com/v4/rockets")
-    }
-    
     private func fetchData() {
-        guard let requestUrl = getRocketsRequest() else { return }
-        NetworkManager.shared.fetchData(requestUrl: requestUrl,
-                                        model: [ListModel].self,
-                                        completion: { model, error in
+        RocketManager.getInstance().fetchData { model, error in
+            
             if error != nil {
                 return
             }
@@ -73,10 +67,10 @@ class ListViewController: UIViewController {
                                            description: $0.description,
                                            flickrImages: $0.flickrImages)
             })
+            
             self.setFavorites()
             
-        })
-        
+        }
     }
     
     func favoriteAction(_ cell: UITableViewCell) {
