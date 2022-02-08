@@ -128,13 +128,14 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
-		4732EB6F27A09573004BC14E /* Tabs */ = {
+		4732EB6F27A09573004BC14E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				476B81372798AD810093AB37 /* Home */,
 				47CC19BE2790A6A6005DF9EC /* List */,
 				4732EB7027A09581004BC14E /* Favorites */,
 			);
-			path = Tabs;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		4732EB7027A09581004BC14E /* Favorites */ = {
@@ -223,8 +224,7 @@
 				47CC19CC2790B198005DF9EC /* Resources */,
 				47D629F527A5BF2700A0E6AF /* Networking */,
 				476B81362798AC7C0093AB37 /* Data */,
-				476B81372798AD810093AB37 /* Home */,
-				4732EB6F27A09573004BC14E /* Tabs */,
+				4732EB6F27A09573004BC14E /* Scenes */,
 				47CC19972790A59D005DF9EC /* Assets.xcassets */,
 				47CC199C2790A59D005DF9EC /* Info.plist */,
 				47CC19992790A59D005DF9EC /* LaunchScreen.storyboard */,
